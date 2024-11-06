@@ -9,6 +9,8 @@ public class Partner {
     private String whoIs;
     private String howMuch;
     private String sinceWhen;
+    private String iconPictureLink;
+    private String websiteLink;
 
     public Partner() {
     }
@@ -75,5 +77,21 @@ public class Partner {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getIconPictureLink() {
+        return iconPictureLink;
+    }
+
+    public void setIconPictureLink(String iconPictureLink) {
+        this.iconPictureLink = iconPictureLink;
+    }
+
+    public String getWebsiteLink() {
+        return websiteLink;
+    }
+
+    public void setWebsiteLink(String websiteLink) {
+        this.websiteLink = websiteLink;
     }
 }
