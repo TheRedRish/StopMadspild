@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/partnerStyle.css">
+    <title th:value="${partner.name}">Partner Information</title>
+</head>
+<body>
+<div class="partner-container">
+    <header class="partner-header">
+        <div class="partner-header__content">
+            <img th:src="${partner.iconPictureLink}" alt="Logo for Partner" class="partner-header__logo">
+            <h1 class="partner-header__title" th:text="${partner.name}">Partner Name</h1>
+        </div>
+    </header>
+
+    <section class="partner-info">
+        <div class="partner-info__box">
+            <img src="/images/gettyimages-1181852767_1600x900.jpg" class="partner-info__box-image"
+                 alt="Image for Hvem er">
+            <div class="partner-info__box-content">
+                <h2 class="partner-info__box-title">Hvem er <span th:text="${partner.name}">Partner</span>?</h2>
+                <p class="partner-info__box-text" th:text="${partner.whoIs}">Partner description goes here...</p>
+            </div>
+        </div>
+        <div class="partner-info__box">
+            <img src="/images/COLOURBOX49689356.webp" class="partner-info__box-image"
+                 alt="Image for Hvad er de primære kilder til madspild?">
+            <div class="partner-info__box-content">
+                <h2 class="partner-info__box-title">Hvad er de primære kilder til madspild?</h2>
+                <p class="partner-info__box-text" th:text="${partner.howMuch}">Primary sources of waste information goes
+                    here...</p>
+            </div>
+        </div>
+        <div class="partner-info__box">
+            <img src="/images/53b81c94-4013-4dfe-9489-bb7b86b158e7.jpg" class="partner-info__box-image"
+                 alt="Image for Hvor længe har de arbejdet med madspild?">
+            <div class="partner-info__box-content">
+                <h2 class="partner-info__box-title">Hvor længe har de arbejdet med madspild?</h2>
+                <p class="partner-info__box-text" th:text="${partner.sinceWhen}">How long they've worked on reducing
+                    waste goes here...</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="report-section">
+        <h2 class="report-section__title">Oversigt over madspildsreduktion og donationsstatistikker</h2>
+        <a href="#" class="report-section__button">Download Rapport</a>
+    </section>
+</div>
+</body>
+</html>
