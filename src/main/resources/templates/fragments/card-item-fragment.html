@@ -1,0 +1,15 @@
+<div th:fragment="cardItem(imageSrc, linkUrl, title, description)" class="card-item">
+    <img class="card-item__icon" th:src="${imageSrc}" th:alt="'image for ' + ${title}">
+
+    <div class="card-item__overlay">
+        <a class="card-item__overlay-link" th:href="${linkUrl}">
+            <div class="card-item__overlay-text">Læs mere</div>
+        </a>
+    </div>
+
+    <!-- Box under the image to show title and description on hover -->
+    <div class="card-item__info-box">
+        <h3 class="card-item__title" th:text="${title}">Default Title</h3>
+        <p class="card-item__description" th:text="${description}">Default description...</p>
+    </div>
+</div>

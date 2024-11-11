@@ -35,47 +35,6 @@
     margin-bottom: 40px;
 }
 
-.partner-info__box {
-    flex: 1 1 100%;
-    padding: 20px;
-    border-radius: 8px;
-    display: flex;
-    gap: 30px;
-    box-sizing: border-box;
-}
-
-.partner-info__box--reversed {
-    flex-direction: row-reverse;
-}
-
-.partner-info__box .partner-info__box-image {
-    max-width: 30%;
-    max-height: 100%;
-    flex-shrink: 0;
-    object-fit: contain;
-}
-
-.partner-info__box-content {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    box-shadow: -15px 6px 9px rgba(0, 0, 0, 0.08);
-    clip-path: inset(-50px 0 -50px -50px);
-}
-
-.partner-info__box-title {
-    font-size: 1.5rem;
-    color: #00796b;
-    margin-bottom: 10px;
-}
-
-.partner-info__box-text {
-    font-size: 1rem;
-    color: #555;
-    white-space: pre-wrap;
-    line-height: 1.5;
-}
-
 .report-section {
     text-align: center;
     margin-top: 40px;
