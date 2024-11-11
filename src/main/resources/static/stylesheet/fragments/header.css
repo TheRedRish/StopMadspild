@@ -1,0 +1,38 @@
+.site-header {
+    background-color: white; /* Mørk baggrund */
+    padding: 15px 0; /* Lidt padding for at gøre headeren højere */
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Centrerer navigationen */
+    height: 40px;
+    align-items: center;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px; /* Mellemrum mellem links */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid black;
+}
+
+.active-link {
+    border-bottom: 2px solid black;
+}
