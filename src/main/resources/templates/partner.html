@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/stylesheet/partnerStyle.css">
+    <link rel="stylesheet" th:href="@{/stylesheet/fragments/infoBox.css}">
     <title th:text="${partner.name} + ' - Partner Information'">Partner Information</title>
 </head>
 <body>
@@ -20,32 +21,9 @@
     </header>
 
     <section class="partner-info">
-        <div class="partner-info__box">
-            <img src="/images/gettyimages-1181852767_1600x900.jpg" class="partner-info__box-image"
-                 alt="Image for Hvem er">
-            <div class="partner-info__box-content">
-                <h2 class="partner-info__box-title">Hvem er <span th:text="${partner.name}">Partner</span>?</h2>
-                <p class="partner-info__box-text" th:text="${partner.whoIs}">Partner description goes here...</p>
-            </div>
-        </div>
-        <div class="partner-info__box partner-info__box--reversed">
-            <img src="/images/COLOURBOX49689356.webp" class="partner-info__box-image"
-                 alt="Image for Hvad er de primære kilder til madspild?">
-            <div class="partner-info__box-content">
-                <h2 class="partner-info__box-title">Hvad er de primære kilder til madspild?</h2>
-                <p class="partner-info__box-text" th:text="${partner.howMuch}">Primary sources of waste information goes
-                    here...</p>
-            </div>
-        </div>
-        <div class="partner-info__box">
-            <img src="/images/53b81c94-4013-4dfe-9489-bb7b86b158e7.jpg" class="partner-info__box-image"
-                 alt="Image for Hvor længe har de arbejdet med madspild?">
-            <div class="partner-info__box-content">
-                <h2 class="partner-info__box-title">Hvor længe har de arbejdet med madspild?</h2>
-                <p class="partner-info__box-text" th:text="${partner.sinceWhen}">How long they've worked on reducing
-                    waste goes here...</p>
-            </div>
-        </div>
+        <div th:replace="fragments/info-box-fragment :: info (false, '/images/gettyimages-1181852767_1600x900.jpg', 'Hvem er ' + ${partner.name}, ${partner.whoIs})"></div>
+        <div th:replace="fragments/info-box-fragment :: info (true, '/images/COLOURBOX49689356.webp', 'Hvad er de primære kilder til madspild?', ${partner.howMuch})"></div>
+        <div th:replace="fragments/info-box-fragment :: info (false, '/images/53b81c94-4013-4dfe-9489-bb7b86b158e7.jpg', 'Hvor længe har de arbejdet med madspild?', ${partner.sinceWhen})"></div>
     </section>
 
     <section class="report-section">

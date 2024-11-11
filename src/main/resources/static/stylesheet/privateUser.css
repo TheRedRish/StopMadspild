@@ -1,0 +1,24 @@
+.partners__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 10px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    .partners__list {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .partners__list {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .partners__list {
+        grid-template-columns: 1fr; /* 1 item per row on very small screens */
+    }
+}
