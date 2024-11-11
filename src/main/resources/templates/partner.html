@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/stylesheet/partnerStyle.css">
-    <title th:value="${partner.name}">Partner Information</title>
+    <title th:text="${partner.name} + ' - Partner Information'">Partner Information</title>
 </head>
 <body>
 <div class="partner-container">
@@ -23,7 +23,7 @@
                 <p class="partner-info__box-text" th:text="${partner.whoIs}">Partner description goes here...</p>
             </div>
         </div>
-        <div class="partner-info__box">
+        <div class="partner-info__box partner-info__box--reversed">
             <img src="/images/COLOURBOX49689356.webp" class="partner-info__box-image"
                  alt="Image for Hvad er de primære kilder til madspild?">
             <div class="partner-info__box-content">
