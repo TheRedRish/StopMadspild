@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="/stylesheet/header.css">
-    <link rel="stylesheet" href="/stylesheet/Usecase3.css">
-    <link rel="stylesheet" href="/stylesheet/footer.css">
+    <link rel="stylesheet" href="/stylesheet/siteWideStyle.css">
+    <link rel="stylesheet" href="/stylesheet/partnersIconStyle.css">
+    <link rel="stylesheet" href="/stylesheet/companySearchStyle.css">
 </head>
 <body>
 
@@ -20,8 +20,64 @@
         </ul>
     </nav>
 </header>
-
 <!-- KODEN TIL HEADER SLUTTER-->
+<div class="search-page">
+    <div class="search-page__header">
+        <h2 class="search-page__title">Find partnere</h2>
+    </div>
+
+    <div class="search-page__content">
+        <div class="search-page__input-container">
+            <form class="search-page__input-group" action="/searchPartner" method="post">
+                <label class="search-page__input-group__label">
+                    <input type="text" class="search-page__input-group__input" placeholder="Postnummer eller bynavn">
+                </label>
+                <button class="search-page__input-group__button">Søg</button>
+            </form>
+        </div>
+        <div class="map">
+            <div class="map__container">
+                <p class="map__placeholder">Map over partners (Integration required)</p>
+            </div>
+        </div>
+        <div class="search-results">
+            <div class="search-results__message" th:classappend="${#lists.isEmpty(partners) ? '' : 'hidden'}">No partners found in this area</div>
+
+
+            <div class="search-results__list" >
+                <a class="search-results__item-link" th:each="partner : ${partners}" th:href="@{/partner/{id}(id=${partner.id})}">
+                    <div class="search-results__item">
+                        <h3 class="search-results__item-name" th:text="${partner.name}"></h3>
+                        <p class="search-results__item-address" th:text="${partner.address}"></p>
+                        <p class="search-results__item-hours" th:text="${partner.openingHours}"></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="partners">
+    <h2>Samarbejdspartnere</h2>
+
+    <div class="partners__error-message hidden">Kunne ikke åbne linket. Prøv venligst igen senere.</div>
+
+    <div class="partners__list">
+        <div class="partners__item" th:each="partner : ${partners}">
+            <img class="partners__icon" th:src="${partner.iconPictureLink}" th:alt="${partner.name}">
+            <div class="partners__overlay">
+                <a class="partners__item-link" th:href="@{/partner/{id}(id=${partner.id})}">
+                    <div class="partners__overlay__text">Læs mere</div>
+                </a>
+            </div>
+            <!-- Box under the image to show name and description on hover -->
+            <div class="partners__info-box">
+                <h3 class="partners__name" th:text="${partner.name}"></h3>
+                <p class="partners__description" th:text="${partner.whoIs}"></p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- KODEN TIL FOOTEREN -->
 <footer class="site-footer">
@@ -29,7 +85,6 @@
 
         <!-- Logo og Addresse -->
         <div class="footer-section">
-
             <a th:href="@{/}"><img src="/images/dmm-logo-green.svg" class="footer-logo"> </a>
             <p><strong>Addresse:</strong><br>
                 Holbergsgade 6<br>
