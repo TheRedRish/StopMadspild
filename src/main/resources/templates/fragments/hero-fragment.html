@@ -1,0 +1,16 @@
+
+
+<div th:fragment="hero(heroImage, heroTitle, heroDescription, ctaLink)">
+    <section class="hero">
+        <div class="hero-background">
+            <img th:src="${heroImage}" alt="Hero image" class="hero-image" />
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title" th:text="${heroTitle}">Default Title</h1>
+            <p class="hero-description" th:text="${heroDescription}">
+                Default description text about the organization.
+            </p>
+            <a th:href="${ctaLink}" class="hero-button">Læs mere</a>
+        </div>
+    </section>
+</div>
