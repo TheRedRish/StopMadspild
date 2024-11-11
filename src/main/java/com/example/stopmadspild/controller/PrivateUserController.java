@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestAttribute;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -46,7 +47,7 @@ public class PrivateUserController {
         partner.setName("Salling Group");
         partner.setEmail("dit_email@eksempel.dk");
         partner.setAddress("Dit adresse");
-        partner.setOpeningHours("Dine  opening hours");
+        partner.setOpeningHours("Dine opening hours");
 
         partner.setWhoIs("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet nulla auctor, vestibulum magna sed, convallis ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed at mauris quis nisi consequat cursus. Nulla facilisi. In hac habitasse platea dictumst. Sed quis nulla eu tellus convallis convallis. Nullam et magna sit amet nunc sollicitudin malesuada. Sed eget risus sit amet nunc ultricies dictum. Sed vitae nunc eu nunc ultricies dictum. Sed sit amet nunc eu nunc ultricies dictum. Sed vitae nunc eu nunc ultricies dictum. Nulla facilisi. In hac habitasse platea dictumst. Sed quis nulla eu tellus convallis convallis. Nullam et magna sit amet nunc sollicitudin malesuada. Sed eget risus sit amet nunc ultricies dictum." +
                 "Salling Group sælger dagligvarer og har en række forskellige butikker og kæder.\n" +

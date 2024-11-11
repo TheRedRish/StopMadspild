@@ -1,3 +1,52 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: white;
+}
+
+/* Header styling */
+.site-header {
+    background-color: #333; /* Mørk baggrund */
+    padding: 15px 0; /* Lidt padding for at gøre headeren højere */
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Centrerer navigationen */
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px; /* Mellemrum mellem links */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff; /* Hvid tekst */
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #555; /* Hover-effekt med mørkere baggrund */
+    border-radius: 4px;
+}
+/* Header styling end */
+
 /* Footer styling */
 .site-footer {
     background-color: #e0e0e0; /* Lys grå baggrund */
@@ -56,7 +105,7 @@
 }
 
 .footer-section ul li a:hover {
-    color: #555; /* Skift til mørkere farve ved hover */
+    color: #555; /* Skift til text farve ved hover */
 }
 
 .social-icons {
@@ -69,3 +118,6 @@
     width: 24px;
     height: 24px;
 }
+/* Footer styling end*/
+
+
