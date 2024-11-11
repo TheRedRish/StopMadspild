@@ -1,17 +1,19 @@
 package com.example.stopmadspild.controller;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-@Controller
-public class PrivateUserController {
 
-    @GetMapping("/privateuser")
+@Controller
+public class AboutDMM {
+
+    @GetMapping("/aboutdmm")
     public String index1(){
-        return "privateuser";
+        return "aboutdmm";
     }
 
-    @PostMapping("/privateuser")
+    @PostMapping("/aboutdmm")
     public String index(){
-        return "redirect:privateuser";
+        return "redirect:kontakt";
     }
 }
