@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Title</title>
     <link rel="stylesheet" href="/stylesheet/siteWideStyle.css">
+    <link rel="stylesheet" href="/stylesheet/contactform.css">
 </head>
 <body>
 <!-- KODEN TIL HEADER -->
@@ -20,7 +21,15 @@
 </header>
 
 <!-- KODEN TIL HEADER SLUTTER-->
-
+<div class="contact-form-container">
+    <h2>Smid os en besked!</h2>
+    <form class="contact-form">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Message" rows="10" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+</div>
 <!-- Content of the page -->
 <div class="content">
     <!-- Din sideindhold går her -->

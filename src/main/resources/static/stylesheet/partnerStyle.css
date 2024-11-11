@@ -44,7 +44,7 @@
     box-sizing: border-box;
 }
 
-.partner-info__box:nth-of-type(2n) {
+.partner-info__box--reversed {
     flex-direction: row-reverse;
 }
 
