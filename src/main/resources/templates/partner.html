@@ -7,6 +7,11 @@
     <title th:text="${partner.name} + ' - Partner Information'">Partner Information</title>
 </head>
 <body>
+
+<!-- FRAGMENT TIL HEADER START -->
+<div th:replace="fragments/header-fragment :: header"></div>
+<!-- FRAGMENT TIL HEADER SLUT -->
+
 <div class="partner-container">
     <header class="partner-header">
         <div class="partner-header__content">
@@ -26,5 +31,10 @@
         <a href="#" class="report-section__button">Download Rapport</a>
     </section>
 </div>
+
+<!-- FRAGMENT TIL FOOTER START -->
+<div th:replace="fragments/footer-fragment :: footer"></div>
+<!-- FRAGMENT TIL FOOTER SLUT -->
+
 </body>
 </html>

@@ -7,21 +7,23 @@
     <link rel="stylesheet" href="/stylesheet/privateUser.css">
     <link rel="stylesheet" href="/stylesheet/fragments/cardItem.css">
     <link rel="stylesheet" href="/stylesheet/fragments/companySearchPage.css">
+    <link rel="stylesheet" href="/stylesheet/herostyles.css">
 </head>
 <body>
 
-<!-- KODEN TIL HEADER -->
-<header class="site-header">
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="/aboutdmm">Om Danmark Mod Madspild</a></li>
-            <li><a href="/privateuser">Privatforbrugere</a></li>
-            <li><a href="/company">Virksomheder</a></li>
-            <li><a href="/collaborators">Samarbejdspartnere</a></li>
-        </ul>
-    </nav>
-</header>
-<!-- KODEN TIL HEADER SLUTTER-->
+<!-- FRAGMENT TIL HEADER START -->
+<div th:replace="fragments/header-fragment :: header"></div>
+<!-- FRAGMENT TIL HEADER SLUT -->
+
+<!-- HERO FRAGMENT START -->
+<div th:replace="fragments/hero-fragment :: hero(
+        '/images/arrangement-compost-made-rotten-food-with-copy-space.jpg',
+        'DANMARK MOD MADSPILD',
+        'Som privatperson kan du gøre en stor forskel i kampen mod madspild. Danmark mod Madspild er en nonprofitorganisation dedikeret til at reducere madspild og fremme bæredygtige vaner. Vi inspirerer og guider dig til små ændringer i hverdagen, der tilsammen kan skabe store resultater.',
+        '#cta-link'
+    )"></div>
+<!-- HERO FRAGMENT SLUT -->
+
 
 <div th:replace="/fragments/company-search-page :: companySearchPage (${partners})"></div>
 
@@ -34,53 +36,9 @@
     </div>
 </div>
 
-<!-- KODEN TIL FOOTEREN -->
-<footer class="site-footer">
-    <div class="footer-container">
-
-        <!-- Logo og Addresse -->
-        <div class="footer-section">
-            <a th:href="@{/}"><img src="/images/dmm-logo-green.svg" class="footer-logo"> </a>
-            <p><strong>Addresse:</strong><br>
-                Holbergsgade 6<br>
-                1057 København</p>
-        </div>
-
-        <!-- Danmark mod Madspild Sektion -->
-        <div class="footer-section">
-            <h3>Danmark mod Madspild</h3>
-            <ul>
-                <li><a href="/aboutdmm">Om Os</a></li>
-                <li><a href="/aboutdmm">Vores Vision</a></li>
-                <li><a href="/aboutdmm">Vores Mission</a></li>
-                <li><a href="/aboutdmm">Kontakt os</a></li>
-            </ul>
-        </div>
-
-        <!-- Partner Information sektion -->
-        <div class="footer-section">
-            <h3>Til Partnere</h3>
-            <ul>
-                <li><a href="/collaborators">Cases</a></li>
-                <li><a href="/collaborators">Bliv partner</a></li>
-                <li><a href="/collaborators">Sådan bliver du partner</a></li>
-            </ul>
-        </div>
-
-        <!-- Følg os sektion -->
-        <div class="footer-section">
-            <h3>Følg os</h3>
-            <ul>
-                <li><a href="https://www.facebook.com/OneThirdDK/?_rdr">Facebook</a></li>
-                <li><a href="https://www.linkedin.com/company/one-third-think-thank/">LinkedIn</a></li>
-                <li><a href="https://www.youtube.com/">YouTube</a></li>
-                <li><a href="https://x.com/OneThirdDK">X</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-<!-- KODEN TIL FOOTER SLUT -->
+<!-- FRAGMENT TIL FOOTER START -->
+<div th:replace="fragments/footer-fragment :: footer"></div>
+<!-- FRAGMENT TIL FOOTER SLUT -->
 
 </body>
 </html>
