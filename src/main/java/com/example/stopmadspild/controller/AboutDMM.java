@@ -5,16 +5,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
-public class SamarbejdspartnerController {
+public class AboutDMM {
 
-    @GetMapping("/samarbejdspartner")
+    @GetMapping("/aboutdmm")
     public String index1(){
-        return "samarbejdspartnere";
+        return "aboutdmm";
     }
 
-    @PostMapping("/samarbejdspartner")
+    @PostMapping("/aboutdmm")
     public String index(){
-        return "redirect:samarbejdspartner";
+        return "redirect:kontakt";
     }
-
 }

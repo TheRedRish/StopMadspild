@@ -6,6 +6,7 @@
     <title>Page Title</title>
     <link rel="stylesheet" href="/stylesheet/header.css">
     <link rel="stylesheet" href="/stylesheet/Usecase3.css">
+    <link rel="stylesheet" href="/stylesheet/contactformular.css">
     <link rel="stylesheet" href="/stylesheet/footer.css">
 </head>
 <body>
@@ -14,31 +15,50 @@
 <header class="site-header">
     <nav class="navbar">
         <ul class="nav-links">
-            <li><a href="/omdmm">Om Danmark Mod Madspild</a></li>
-            <li><a href="/privatforbrugere">Privatforbrugere</a></li>
-            <li><a href="/virksomheder">Virksomheder</a></li>
-            <li><a href="/samarbejdspartner">Samarbejdspartnere</a></li>
+            <li><a href="/aboutdmm">Om Danmark Mod Madspild</a></li>
+            <li><a href="/privateuser">Privatforbrugere</a></li>
+            <li><a href="/company">Virksomheder</a></li>
+            <li><a href="/collaborators">Samarbejdspartnere</a></li>
         </ul>
     </nav>
 </header>
 
 
 <!-- Content of the page -->
-<div class="content">
-    <div class="signup-container">
-        <h1 class="signup-title">Sign up your company</h1>
-        <div class="signup-box">
-            <p class="signup-text">
-                Sign your business up for our food waste program and make a difference by saving surplus food. Together, we fight food waste and create a more sustainable future!
-            </p>
-            <form class="signup-form">
-                <input type="email" placeholder="Email of contactperson" class="input-field">
-                <input type="text" placeholder="Name of Company" class="input-field">
-                <button type="submit" class="signup-button">Sign up</button>
-            </form>
+<div class="main-container">
+    <!-- SIGNUP KOMPONENTET -->
+    <div class="Signup-form-container">
+        <div class="signup-container">
+            <h1 class="signup-title">Tilmeld din virksomhed</h1>
+            <div class="signup-box">
+                <p class="signup-text">
+                    Tilmeld din virksomhed til vores madspildsprogram og vær med til at gøre en forskel ved at redde overskydende mad. Sammen bekæmper vi madspild og skaber en mere bæredygtig fremtid!
+                </p>
+                <form class="signup-form">
+                    <input type="E-mail" placeholder="Email til kontaktperson" class="input-field">
+                    <input type="text" placeholder="Virksomhedens navn" class="input-field">
+                    <button type="submit" class="signup-button">Tilmeld</button>
+                </form>
+            </div>
         </div>
     </div>
+    <!-- SIGNUP KOMPONENTET SLUT -->
+
+
+    <!-- kONTAKTFORMULAR KOMPONENTET -->
+    <div class="contact-form-container">
+        <h2>Smid os en besked!</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" rows="10" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <!-- KONTAKTFORMULAR KOMPONENTET SLUT -->
+
 </div>
+
 
 <!-- KODEN TIL FOOTEREN -->
 <footer class="site-footer">
@@ -57,10 +77,10 @@
         <div class="footer-section">
             <h3>Danmark mod Madspild</h3>
             <ul>
-                <li><a href="/omdmm">Om Os</a></li>
-                <li><a href="/omdmm">Vores Vision</a></li>
-                <li><a href="/omdmm">Vores Mission</a></li>
-                <li><a href="/omdmm">Kontakt os</a></li>
+                <li><a href="/aboutdmm">Om Os</a></li>
+                <li><a href="/aboutdmm">Vores Vision</a></li>
+                <li><a href="/aboutdmm">Vores Mission</a></li>
+                <li><a href="/aboutdmm">Kontakt os</a></li>
             </ul>
         </div>
 
@@ -68,9 +88,9 @@
         <div class="footer-section">
             <h3>Til Partnere</h3>
             <ul>
-                <li><a href="/samarbejdspartner">Cases</a></li>
-                <li><a href="/samarbejdspartner">Bliv partner</a></li>
-                <li><a href="/samarbejdspartner">Sådan bliver du partner</a></li>
+                <li><a href="/collaborators">Cases</a></li>
+                <li><a href="/collaborators">Bliv partner</a></li>
+                <li><a href="/collaborators">Sådan bliver du partner</a></li>
             </ul>
         </div>
 

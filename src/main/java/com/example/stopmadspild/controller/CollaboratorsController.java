@@ -5,16 +5,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
-public class VirksomhederController {
+public class CollaboratorsController {
 
-    @GetMapping("/virksomheder")
+    @GetMapping("/collaborators")
     public String index1(){
-        return "virksomheder";
+        return "collaborators";
     }
 
-    @PostMapping("/virksomheder")
+    @PostMapping("/collaborators")
     public String index(){
-        return "redirect:virksomheder";
+        return "redirect:collaborators";
     }
 
 }
