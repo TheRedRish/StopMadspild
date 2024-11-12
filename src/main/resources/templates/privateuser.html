@@ -16,7 +16,7 @@
 
 <!-- HERO FRAGMENT START -->
 <div th:replace="fragments/hero-fragment :: hero(
-        '/images/arrangement-compost-made-rotten-food-with-copy-space.jpg',
+        '/images/assortment-compost-made-rotten-food-with-copy-space.jpg',
         'DANMARK MOD MADSPILD',
         'Som privatperson kan du gøre en stor forskel i kampen mod madspild. Danmark mod Madspild er en nonprofitorganisation dedikeret til at reducere madspild og fremme bæredygtige vaner. Vi inspirerer og guider dig til små ændringer i hverdagen, der tilsammen kan skabe store resultater.',
         '#cta-link'
@@ -36,7 +36,7 @@
 <div class="partners">
     <div class="partners__list">
         <div th:each="partner : ${partners}">
-            <div th:replace="/fragments/card-item-fragment :: cardItem (${partner.iconPictureLink}, '/partner/'+${partner.id}, ${partner.name}, ${partner.whoIs})"></div>
+            <div th:replace="/fragments/card-item-fragment :: cardItem (${partner.iconPictureLink}, '/partner/'+${partner.id}, ${partner.name}, ${partner.whoIs}, false)"></div>
         </div>
     </div>
 </div>
