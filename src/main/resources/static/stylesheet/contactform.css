@@ -11,24 +11,24 @@
 .contact-form-container {
     flex-wrap: wrap;
     text-align: center;
-    display: flex;
+    justify-self: center;
     justify-content: center;
     align-items: center;
-    display: flex;
     width: 400px;
     border: 1px solid #ddd;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
 }
 
-h2 {
+.contact-form-container h2 {
     text-align: center;
     color: #333;
-    border-bottom: 2px solid #00bcd4;
     padding-bottom: 5px;
     margin-bottom: 20px;
+    border-bottom: 2px solid black;
 }
 
 .contact-form input,
@@ -48,12 +48,13 @@ h2 {
 
 .contact-form button {
     width: 100%;
-    background-color: #4a4a4a;
+    background-color: #3B6B35;
     color: white;
     padding: 12px;
     border: none;
     border-radius: 3px;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
 }
 

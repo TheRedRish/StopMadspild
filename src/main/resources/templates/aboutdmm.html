@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Title</title>
     <link rel="stylesheet" href="/stylesheet/siteWideStyle.css">
-    <link rel="stylesheet" href="/stylesheet/herostyles.css">
+    <link rel="stylesheet" href="/stylesheet/aboutdmm.css">
+    <link rel="stylesheet" href="/stylesheet/fragments/hero.css">
     <link rel="stylesheet" href="/stylesheet/contactform.css">
+    <link rel="stylesheet" href="/stylesheet/fragments/infoBox.css">
+
 </head>
 <body>
 
@@ -16,10 +19,9 @@
 
 <div class="content">
 
-
     <!-- KODEN TIL HERO -->
     <div th:replace="fragments/hero-fragment :: hero(
-        '/images/arrangement-compost-made-rotten-food-with-copy-space.jpg',
+        '/images/aboutdmm.jpg',
         'DANMARK MOD MADSPILD',
         'Danmark mod Madspild er en nonprofitorganisation dedikeret til at reducere madspild og skabe en bæredygtig fremtid.'+
          'Vi arbejder for at fremme bevidsthed, ændre vaner og inspirere både private og virksomheder til at tage handling og bidrage til en verden, hvor ingen mad går til spilde. '+
@@ -28,6 +30,36 @@
     )"></div>
     <!-- KODEN TIL HERO SLUT -->
 
+   <div class = "aboutdmm-container">
+       <div class="mission-vision-content">
+    <!-- KODEN TIL MISSION START -->
+    <div th:replace="fragments/info-box-fragment :: info(
+    'true',
+    '/images/aboutdmm1.jpg',
+    'MISSION',
+    'Vi arbejder for en verden med respekt for madens værdi ved at reducere madspild gennem bevidsthed, ansvar og handling. Vores mission er at inspirere og hjælpe mennesker til at udnytte madens fulde potentiale og skabe en bæredygtig fremtid, hvor ressourcer ikke går til spilde.'
+     )"></div>
+    <!-- KODEN TIL MISSION SLUT -->
+
+    <!-- KODEN TIL VISION START -->
+    <div th:replace="fragments/info-box-fragment :: info(
+    'false',
+    '/images/aboutdmm2.jpg',
+    'VISION',
+    'Vores vision er en verden, hvor madspild ikke eksisterer, og hvor alle værdsætter og udnytter maden fuldt ud. Vi stræber efter at skabe en kultur, hvor bæredygtige madvaner er normen, og hvor ressourcerne anvendes med omtanke, så fremtidige generationer kan nyde en sund og rigelig planet'
+     )"></div>
+    <!-- KODEN TIL VISION SLUT -->
+
+    <!-- KODEN TIL VISION START -->
+    <div th:replace="fragments/info-box-fragment :: info(
+    'true',
+    '/images/aboutdmm3.jpg',
+    'ORGANISATION',
+    'Danmark Mod Madspild er en non-profit organisation dedikeret til at bekæmpe madspild og fremme bæredygtige madvaner. Vi arbejder på at reducere den enorme mængde mad, der går til spilde hvert år, ved at skabe oplysning, tilbyde praktiske løsninger og styrke fællesskaber, så vi sammen kan gøre en forskel. Gennem samarbejde med lokale aktører, virksomheder og enkeltpersoner søger vi at skabe en verden, hvor maden respekteres, og ressourcerne anvendes med omtanke. Vores mål er at inspirere til handling, dele viden og gøre det nemmere for alle at bidrage til en mere bæredygtig fremtid.'
+     )"></div>
+    <!-- KODEN TIL VISION SLUT -->
+
+   </div>
 
     <div class="contact-form-container">
         <h2>Smid os en besked!</h2>
@@ -39,6 +71,8 @@
         </form>
     </div>
     <!-- Din sideindhold går her -->
+</div>
+
 </div>
 
 <!-- FRAGMENT TIL FOOTER START -->
