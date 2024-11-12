@@ -5,7 +5,8 @@
     <title>Title</title>
     <link rel="stylesheet" href="/stylesheet/siteWideStyle.css">
     <link rel="stylesheet" href="/stylesheet/companySignUpStyle.css">
-    <link rel="stylesheet" href="/stylesheet/herostyles.css">
+    <link rel="stylesheet" href="/stylesheet/fragments/hero.css">
+    <link rel="stylesheet" href="/stylesheet/fragments/infoBox.css">
 </head>
 <body>
 
@@ -17,32 +18,70 @@
 <div th:replace="fragments/hero-fragment :: hero(
         '/images/arrangement-compost-made-rotten-food-with-copy-space-company.jpg',
         'DANMARK MOD MADSPILD',
-        'Som virksomhed har I en unik mulighed for at gøre en forskel i kampen mod madspild. Danmark mod Madspild er en nonprofitorganisation, der samarbejder med erhvervslivet for at reducere madspild og skabe bæredygtige løsninger. Gennem partnerskaber kan vi fremme ansvarlige praksisser, inspirere til innovation og styrke jeres bæredygtige profil',
+        'Gør en forskel med os – Bliv partner i kampen mod madspild! Sammen kan vi skabe en bæredygtig fremtid, hvor hver bidrag tæller. Tilmeld din virksomhed og vær med til at udnytte madens fulde værdi.',
         '#cta-link'
     )"></div>
 <!-- HERO FRAGMENT SLUT -->
 
-<!-- KODE TIL SIGNUP FORMULAR START -->
-<div class="Signup-form-container">
-    <div class="signup-container">
-        <h1 class="signup-title">Tilmeld din virksomhed</h1>
-        <div class="signup-box">
-            <p class="signup-text">
-                Tilmeld din virksomhed til vores madspildsprogram og vær med til at gøre en forskel ved at redde overskydende mad. Sammen bekæmper vi madspild og skaber en mere bæredygtig fremtid!
-            </p>
-            <form class="signup-form">
-                <input type="E-mail" placeholder="Email til kontaktperson" class="input-field">
-                <input type="text" placeholder="Virksomhedens navn" class="input-field">
-                <button type="submit" class="signup-button">Tilmeld</button>
-            </form>
+<div class="company-container">
+    <div class="company-box-content">
+
+        <!-- KODEN TIL box 1 start -->
+        <div th:replace="fragments/info-box-fragment :: info(
+    'true',
+    '/images/redhair.jpg',
+    'SAMARBEJDE MED DMM',
+    'Er din virksomhed klar til at gøre en forskel for miljøet og samtidig styrke jeres bæredygtige profil? Bliv en del af vores samarbejde med [Organisationens Navn] og vær med til at reducere madspild i Danmark.'+
+     'Som partner får I mulighed for at bidrage direkte til omfordeling af overskudsmad, der ellers ville gå til spilde, til gavn for lokalsamfundet og miljøet. Sammen skaber vi en positiv effekt, hvor madens fulde værdi udnyttes, og ressourcerne anvendes med omtanke.'
+     )"></div>
+        <!-- KODEN TIL box 1 slut -->
+
+        <!-- KODEN TIL box 2 START -->
+        <div th:replace="fragments/info-box-fragment :: info(
+    'false',
+    '/images/greyhair.jpg',
+    'FORDELE VED SAMARBEJDE',
+    ' - En konkret bæredygtig indsats, som I kan være stolte af og dele med kunder, medarbejdere og samarbejdspartnere' +
+    ' - Mulighed for at bidrage med overskudsprodukter og ressourcer, der omfordeles til dem, der har mest brug for det' +
+    ' - Adgang til Danmark Mod Madspild netværk og ressourcer inden for bæredygtighed og madspildsreduktion'
+     )"></div>
+        <!-- KODEN TIL box 2 SLUT -->
+
+        <!-- KODEN TIL box 3 START -->
+        <div th:replace="fragments/info-box-fragment :: info(
+    'true',
+    '/images/nohair.jpg',
+    'BLIV PARTNER NU',
+    'Vi søger engagerede partnere, der vil være med til at gøre en forskel i kampen mod madspild. Er din virksomhed klar til at tage ansvar og bidrage til en mere bæredygtig fremtid? Som partner hos Danmark Mod Madspild får I mulighed for aktivt at reducere madspild, støtte lokalsamfundet og styrke jeres grønne profil.' +
+    'Tilmeld jer via vores formular, og lad os sammen skabe en verden, hvor maden udnyttes til fulde. Udfyld formularen her og bliv en del af løsningen i dag! [Link til formular]'
+     )"></div>
+        <!-- KODEN TIL box 3 SLUT -->
+
+    </div>
+
+    <!-- KODE TIL SIGNUP FORMULAR START -->
+    <div class="Signup-form-container">
+        <div class="signup-container">
+            <h1 class="signup-title">Tilmeld din virksomhed</h1>
+            <div class="signup-box">
+                <p class="signup-text">
+                    Tilmeld din virksomhed til vores madspildsprogram og vær med til at gøre en forskel ved at redde
+                    overskydende mad. Sammen bekæmper vi madspild og skaber en mere bæredygtig fremtid!
+                </p>
+                <form class="signup-form">
+                    <input type="E-mail" placeholder="Email til kontaktperson" class="input-field">
+                    <input type="text" placeholder="Virksomhedens navn" class="input-field">
+                    <button type="submit" class="signup-button">Tilmeld</button>
+                </form>
+            </div>
         </div>
     </div>
-</div>
-<!-- KODE TIL SIGNUP FORMULAR SLUT -->
+    <!-- KODE TIL SIGNUP FORMULAR SLUT -->
 
-<!-- FRAGMENT TIL FOOTER START -->
-<div th:replace="fragments/footer-fragment :: footer"></div>
-<!-- FRAGMENT TIL FOOTER SLUT -->
+</div>
+    <!-- FRAGMENT TIL FOOTER START -->
+    <div th:replace="fragments/footer-fragment :: footer"></div>
+    <!-- FRAGMENT TIL FOOTER SLUT -->
 
 </body>
 </html>
