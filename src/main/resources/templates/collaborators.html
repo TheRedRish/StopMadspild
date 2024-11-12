@@ -5,6 +5,11 @@
     <title>Title</title>
     <link rel="stylesheet" href="/stylesheet/siteWideStyle.css">
     <link rel="stylesheet" href="/stylesheet/fragments/hero.css">
+    <link rel="stylesheet" href="/stylesheet/collaborators.css">
+    <link rel="stylesheet" href="/stylesheet/herostyles.css">
+    <link rel="stylesheet" href="/stylesheet/fragments/infoBox.css">
+    <link rel="stylesheet" href="/stylesheet/fragments/infoBoxContent.css">
+    <link rel="stylesheet" href="/stylesheet/fragments/cardItem.css">
 </head>
 <body>
 
@@ -15,14 +20,24 @@
 
 <!-- HERO FRAGMENT START -->
 <div th:replace="fragments/hero-fragment :: hero(
-        '/images/arrangement-compost-made-rotten-food-with-copy-space.jpg',
+        '/images/arrangement-compost-made-rotten-food-with-copy-space-organisation.jpg',
         'DANMARK MOD MADSPILD',
         'Som en del af vores partnernetværk hjælper du os med at reducere madspild og fremme en bæredygtig udvikling. Danmark mod Madspild er en nonprofitorganisation, der arbejder for at øge bevidstheden, ændre vaner og inspirere til handling – både blandt private og virksomheder.',
         '#cta-link'
     )"></div>
 <!-- HERO FRAGMENT SLUT -->
 
-<!-- KODEN TIL HEADER SLUTTER-->
+<div class="collaborators__container">
+    <div th:replace="fragments/info-box-fragment :: info (true, '/images/pexels-cottonbro-6591154.jpg', 'Organisationer', 'TooGoodToGo og madbanker som FødevareBanken er eksempler på organisationer, der aktivt bekæmper madspild og arbejder tæt sammen med virksomheder og lokale aktører. <br><br> Disse organisationer indsamler overskydende mad fra butikker, restauranter og fødevareproducenter og sikrer, at det når ud til dem, der har brug for det. <br><br> De søger samarbejde med virksomheder, der ønsker at bidrage til at reducere madspild og hjælpe udsatte grupper. <br><br> Ved at samarbejde med sådanne organisationer kan virksomheder både gøre en positiv forskel for miljøet og samfundet, samtidig med at de styrker deres bæredygtighedsprofil.')"></div>
+
+    <div class="partners">
+        <div class="partners__list">
+            <div th:each="partner : ${partners}">
+                <div th:replace="/fragments/card-item-fragment :: cardItem (${partner.iconPictureLink}, ${partner.websiteLink}, ${partner.name}, ${partner.howMuch}, true)"></div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- FRAGMENT TIL FOOTER START -->
 <div th:replace="fragments/footer-fragment :: footer"></div>

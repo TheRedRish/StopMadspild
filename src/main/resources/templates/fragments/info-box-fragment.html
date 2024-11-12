@@ -5,8 +5,5 @@
     <img th:src="${imageSrc}" class="info__box-image"
          th:alt="'image for ' + ${title}">
 
-    <div class="info__box-content">
-        <h2 class="info__box-title" th:text="${title}">Default Title</h2>
-        <p class="info__box-text" th:text="${description}">Default description...</p>
-    </div>
+    <div th:replace="fragments/info-box-content-fragment :: infoBoxContent(${title}, ${description})"></div>
 </div>

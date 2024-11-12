@@ -1,13 +1,9 @@
-.card-item {
-    width: auto;
-    margin: 0 40px;
-    padding: 20px;
-}
 
 .card-item {
     position: relative;
-    padding: 10%;
+    padding: 5%;
     overflow: visible;
+    height: 150px;
 }
 
 .card-item__icon {
@@ -90,9 +86,9 @@
     opacity: 1;       /* Ensure it is visible */
 }
 
-.card-item__info-box .card-item__name {
+.card-item__info-box .card-item__title {
     color: #4CAF50;
-    margin: 0;
+    margin: 10px 0;
     font-size: 16px;
     font-weight: bold;
 }
