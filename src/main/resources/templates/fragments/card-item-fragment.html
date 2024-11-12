@@ -1,8 +1,8 @@
-<div th:fragment="cardItem(imageSrc, linkUrl, title, description)" class="card-item">
+<div th:fragment="cardItem(imageSrc, linkUrl, title, description, targetBlank)" class="card-item">
     <img class="card-item__icon" th:src="${imageSrc}" th:alt="'image for ' + ${title}">
 
     <div class="card-item__overlay">
-        <a class="card-item__overlay-link" th:href="${linkUrl}">
+        <a class="card-item__overlay-link" th:href="${linkUrl}" th:target="${targetBlank ? '_blank' : '_self'}">
             <div class="card-item__overlay-text">Læs mere</div>
         </a>
     </div>
