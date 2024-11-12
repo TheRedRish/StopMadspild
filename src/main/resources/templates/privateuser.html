@@ -6,11 +6,10 @@
     <link rel="stylesheet" href="/stylesheet/siteWideStyle.css">
     <link rel="stylesheet" href="/stylesheet/privateUser.css">
     <link rel="stylesheet" href="/stylesheet/fragments/cardItem.css">
-    <link rel="stylesheet" href="/stylesheet/fragments/companySearchPage.css">
     <link rel="stylesheet" href="/stylesheet/herostyles.css">
+    <link rel="stylesheet" href="/stylesheet/fragments/infoBoxContent.css">
 </head>
 <body>
-
 <!-- FRAGMENT TIL HEADER START -->
 <div th:replace="fragments/header-fragment :: header"></div>
 <!-- FRAGMENT TIL HEADER SLUT -->
@@ -24,17 +23,24 @@
     )"></div>
 <!-- HERO FRAGMENT SLUT -->
 
-<div th:replace="/fragments/company-search-page :: companySearchPage (${partners})"></div>
+<div class="private-user__container">
 
+<div class="private-user__section">
+    <div th:replace="/fragments/info-box-content-fragment :: infoBoxContent('Danmark mod Madspild er Danmarks frivillige aftale om reduktion af madspild', ${'<strong>Om den frivillige aftale</strong> <br><br>Danmark mod Madspild er en frivillig aftale hvis mål er, at halvere madaffald, inkl. madspild og/eller fødevaretab i den danske fødevarebranche inden 2030.' +
+'<br><br>Hvis vi skal lykkes med at mindske madspild er det nødvendigt, at vi ved, hvor meget vi spilder og hvorfor. Når producenter, supermarkeder og restauranter er åbne om deres madspild, kan de vidensdele, samarbejde og inspirere hinanden – og i fællesskab løse det store problem, som madspild udgør i dag.' +
+'<br><br>En række stærke danske virksomheder har allerede besluttet sig for at skabe fundamentet for en dansk halvering af madspildet inden 2030.' +
+'<br><br>Du kan til højre finde virksomheder i dit område og se hvordan du kan hjælpe til.'})"></div>
+
+    <div th:replace="/fragments/company-search-page :: companySearchPage (${partners})"></div>
+</div>
 <div class="partners">
-    <h2>Samarbejdspartnere</h2>
     <div class="partners__list">
         <div th:each="partner : ${partners}">
             <div th:replace="/fragments/card-item-fragment :: cardItem (${partner.iconPictureLink}, '/partner/'+${partner.id}, ${partner.name}, ${partner.whoIs})"></div>
         </div>
     </div>
 </div>
-
+</div>
 <!-- FRAGMENT TIL FOOTER START -->
 <div th:replace="fragments/footer-fragment :: footer"></div>
 <!-- FRAGMENT TIL FOOTER SLUT -->
